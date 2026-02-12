@@ -1,0 +1,76 @@
+{
+  "Random Forest": {
+    "best_params": {
+      "n_estimators": 100,
+      "min_samples_split": 10,
+      "min_samples_leaf": 8,
+      "max_features": "sqrt",
+      "max_depth": 15
+    },
+    "best_cv_auc": 0.8074071150866731,
+    "optimization_time": 36.73529648780823
+  },
+  "XGBoost": {
+    "best_params": {
+      "subsample": 0.6,
+      "n_estimators": 300,
+      "min_samples_split": 15,
+      "min_samples_leaf": 10,
+      "max_depth": 3,
+      "learning_rate": 0.05
+    },
+    "best_cv_auc": 0.7894533602268409,
+    "optimization_time": 66.53000044822693
+  },
+  "SVM": {
+    "best_params": {
+      "kernel": "rbf",
+      "gamma": 0.01,
+      "C": 1.0
+    },
+    "best_cv_auc": 0.8085229033295331,
+    "optimization_time": 49.67225193977356
+  },
+  "kNN": {
+    "best_params": {
+      "weights": "uniform",
+      "n_neighbors": 21,
+      "metric": "manhattan"
+    },
+    "best_cv_auc": 0.779491215761934,
+    "optimization_time": 0.7711601257324219
+  },
+  "Gradient Boosting": {
+    "best_params": {
+      "subsample": 0.6,
+      "n_estimators": 300,
+      "min_samples_split": 15,
+      "min_samples_leaf": 10,
+      "max_depth": 3,
+      "learning_rate": 0.05
+    },
+    "best_cv_auc": 0.7894533602268409,
+    "optimization_time": 65.86541676521301
+  },
+  "AdaBoost": {
+    "best_params": {
+      "n_estimators": 50,
+      "learning_rate": 1.5
+    },
+    "best_cv_auc": 0.8029568242275424,
+    "optimization_time": 18.25964856147766
+  },
+  "Neural Network": {
+    "best_params": {
+      "learning_rate": "constant",
+      "hidden_layer_sizes": [
+        64,
+        32
+      ],
+      "alpha": 0.1,
+      "activation": "relu"
+    },
+    "best_cv_auc": 0.7302861819988891,
+    "optimization_time": 429.34079217910767
+  }
+}

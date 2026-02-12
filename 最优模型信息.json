@@ -1,0 +1,44 @@
+{
+  "model_name": "Gradient Boosting (Isotonic Calibrated)",
+  "model_type": "GradientBoostingClassifier",
+  "calibration_method": "Isotonic",
+  "hyperparameters": {
+    "subsample": 0.6,
+    "n_estimators": 300,
+    "min_samples_split": 15,
+    "min_samples_leaf": 10,
+    "max_depth": 3,
+    "learning_rate": 0.05
+  },
+  "features": [
+    "Dyslipidemia",
+    "PHR",
+    "Uric_acid",
+    "MCV",
+    "Exercise",
+    "Age",
+    "AIP"
+  ],
+  "performance": {
+    "accuracy": 0.9419822723609992,
+    "precision": 1.0,
+    "recall": 0.06493506493506493,
+    "f1_score": 0.12195121951219512,
+    "auc": 0.8203351631186684,
+    "brier_score": 0.05047572634533844
+  },
+  "dataset_info": {
+    "total_samples": 4134,
+    "training_samples": 2893,
+    "test_samples": 1241,
+    "stroke_prevalence": 0.061683599419448475,
+    "feature_count": 7
+  },
+  "training_info": {
+    "random_state": 42,
+    "test_size": 0.3,
+    "smote_applied": true,
+    "calibration_applied": true,
+    "calibration_cv": 5
+  }
+}

@@ -1,0 +1,89 @@
+================================================================================
+7种机器学习模型随机搜索超参数优化结果
+================================================================================
+
+数据集: elderly_hypertension_60plus_standardized.xlsx
+目标变量: Stroke
+特征数量: 7
+特征列表: Dyslipidemia, PHR, Uric_acid, MCV, Exercise, Age, AIP
+训练集大小: 2893
+测试集大小: 1241
+中风患病率: 6.17%
+优化方法: RandomizedSearchCV
+交叉验证: 5折 Stratified K-Fold
+随机采样次数: 50 次/模型
+
+--------------------------------------------------------------------------------
+各模型最优超参数
+--------------------------------------------------------------------------------
+
+1. SVM
+   最优CV AUC: 0.8085
+   优化时间: 49.67秒
+   超参数:
+      - kernel: rbf
+      - gamma: 0.010000
+      - C: 1.000000
+
+2. Random Forest
+   最优CV AUC: 0.8074
+   优化时间: 36.74秒
+   超参数:
+      - n_estimators: 100
+      - min_samples_split: 10
+      - min_samples_leaf: 8
+      - max_features: sqrt
+      - max_depth: 15
+
+3. AdaBoost
+   最优CV AUC: 0.8030
+   优化时间: 18.26秒
+   超参数:
+      - n_estimators: 50
+      - learning_rate: 1.500000
+
+4. XGBoost
+   最优CV AUC: 0.7895
+   优化时间: 66.53秒
+   超参数:
+      - subsample: 0.600000
+      - n_estimators: 300
+      - min_samples_split: 15
+      - min_samples_leaf: 10
+      - max_depth: 3
+      - learning_rate: 0.050000
+
+5. Gradient Boosting
+   最优CV AUC: 0.7895
+   优化时间: 65.87秒
+   超参数:
+      - subsample: 0.600000
+      - n_estimators: 300
+      - min_samples_split: 15
+      - min_samples_leaf: 10
+      - max_depth: 3
+      - learning_rate: 0.050000
+
+6. kNN
+   最优CV AUC: 0.7795
+   优化时间: 0.77秒
+   超参数:
+      - weights: uniform
+      - n_neighbors: 21
+      - metric: manhattan
+
+7. Neural Network
+   最优CV AUC: 0.7303
+   优化时间: 429.34秒
+   超参数:
+      - learning_rate: constant
+      - hidden_layer_sizes: (64, 32)
+      - alpha: 0.100000
+      - activation: relu
+
+--------------------------------------------------------------------------------
+生成的文件:
+1. 随机搜索优化结果/超参数优化结果.json - JSON格式详细结果
+2. 随机搜索优化结果/超参数优化总结.txt - 文本格式总结
+3. 随机搜索优化结果/超参数优化过程.png - 优化过程可视化
+--------------------------------------------------------------------------------

@@ -1,0 +1,78 @@
+7种机器学习模型 Isotonic 校准性能报告 - 中风预测
+======================================================================
+生成时间: 2026-02-12 23:09:45
+数据集: elderly_hypertension_60plus_standardized.xlsx
+特征数量: 7
+特征列表: Dyslipidemia, PHR, Uric_acid, MCV, Exercise, Age, AIP
+训练集大小: 2893, 测试集大小: 1241
+校准方法: Isotonic Regression
+阈值选择方法: Youden's Index (约登指数)
+----------------------------------------------------------------------
+
+模型性能排名 (按AUC):
+--------------------------------------------------
+1. Random Forest:
+   - AUC: 0.8422
+   - Optimal Threshold: 0.0696
+   - Accuracy: 0.7196
+   - Recall: 0.8442
+   - Precision: 0.1621
+   - F1 Score: 0.2720
+   - Brier Score: 0.0515
+
+6. AdaBoost:
+   - AUC: 0.8242
+   - Optimal Threshold: 0.0705
+   - Accuracy: 0.7035
+   - Recall: 0.8442
+   - Precision: 0.1544
+   - F1 Score: 0.2610
+   - Brier Score: 0.0528
+
+2. XGBoost:
+   - AUC: 0.8203
+   - Optimal Threshold: 0.0719
+   - Accuracy: 0.7462
+   - Recall: 0.7792
+   - Precision: 0.1676
+   - F1 Score: 0.2759
+   - Brier Score: 0.0505
+
+5. Gradient Boosting:
+   - AUC: 0.8203
+   - Optimal Threshold: 0.0719
+   - Accuracy: 0.7462
+   - Recall: 0.7792
+   - Precision: 0.1676
+   - F1 Score: 0.2759
+   - Brier Score: 0.0505
+
+3. SVM:
+   - AUC: 0.8179
+   - Optimal Threshold: 0.0629
+   - Accuracy: 0.6825
+   - Recall: 0.8571
+   - Precision: 0.1470
+   - F1 Score: 0.2510
+   - Brier Score: 0.0523
+
+4. kNN:
+   - AUC: 0.7936
+   - Optimal Threshold: 0.0775
+   - Accuracy: 0.6922
+   - Recall: 0.8442
+   - Precision: 0.1494
+   - F1 Score: 0.2539
+   - Brier Score: 0.0539
+
+7. Neural Network:
+   - AUC: 0.7614
+   - Optimal Threshold: 0.0729
+   - Accuracy: 0.6745
+   - Recall: 0.7532
+   - Precision: 0.1309
+   - F1 Score: 0.2231
+   - Brier Score: 0.0552
+
+----------------------------------------------------------------------
+报告生成完毕。

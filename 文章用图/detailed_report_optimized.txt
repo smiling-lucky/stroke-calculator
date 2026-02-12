@@ -1,0 +1,43 @@
+7种机器学习模型比较报告 - 中风预测（使用优化超参数）
+============================================================
+数据集: elderly_hypertension_60plus_standardized.xlsx
+目标变量: Stroke
+特征数量: 7
+特征列表: Dyslipidemia, PHR, Uric_acid, MCV, Exercise, Age, AIP
+训练集大小: 2893
+测试集大小: 1241
+中风患病率: 6.17%
+使用技术: SMOTE处理类别不平衡
+随机种子: 42
+超参数优化方法: RandomizedSearchCV (50次迭代, 5折交叉验证)
+
+模型性能排名 (按AUC):
+--------------------------------------------------
+1. Random Forest: AUC=0.8338, Accuracy=0.7220, F1=0.2706
+   优化超参数: {'n_estimators': 100, 'min_samples_split': 10, 'min_samples_leaf': 8, 'max_features': 'sqrt', 'max_depth': 15}
+
+3. SVM: AUC=0.8193, Accuracy=0.6857, F1=0.2529
+   优化超参数: {'kernel': 'rbf', 'gamma': 0.01, 'C': 1.0}
+
+2. XGBoost: AUC=0.8162, Accuracy=0.6962, F1=0.2475
+   优化超参数: {'subsample': 0.6, 'n_estimators': 300, 'min_samples_split': 15, 'min_samples_leaf': 10, 'max_depth': 3, 'learning_rate': 0.05}
+
+5. Gradient Boosting: AUC=0.8162, Accuracy=0.6962, F1=0.2475
+   优化超参数: {'subsample': 0.6, 'n_estimators': 300, 'min_samples_split': 15, 'min_samples_leaf': 10, 'max_depth': 3, 'learning_rate': 0.05}
+
+6. AdaBoost: AUC=0.7942, Accuracy=0.6406, F1=0.2230
+   优化超参数: {'n_estimators': 50, 'learning_rate': 1.5}
+
+4. kNN: AUC=0.7883, Accuracy=0.6164, F1=0.2145
+   优化超参数: {'weights': 'uniform', 'n_neighbors': 21, 'metric': 'manhattan'}
+
+7. Neural Network: AUC=0.7513, Accuracy=0.6430, F1=0.2159
+   优化超参数: {'learning_rate': 'constant', 'hidden_layer_sizes': [64, 32], 'alpha': 0.1, 'activation': 'relu'}
+
+
+生成的文件:
+------------------------------
+- all_models_roc_curves_optimized.png: 综合ROC曲线
+- models_auc_comparison_optimized.png: AUC比较条形图
+- models_performance_comparison_optimized.csv: 性能比较表格
+- detailed_report_optimized.txt: 详细实验报告
