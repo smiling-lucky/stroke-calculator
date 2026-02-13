@@ -1,0 +1,16 @@
+# 忽略所有文件
+*
+
+# 排除部署核心文件（即保留以下文件）
+!stroke_calculator.py
+!最优模型.pkl
+!最优模型信息.json
+!feature_stats.json
+!requirements.txt
+!.gitignore
+!README.md
+
+# 忽略所有文件夹
+/*/
+
+# 排除特定的必要资源文件夹（如果有的话，目前看没有）
